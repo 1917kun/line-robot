@@ -38,11 +38,11 @@ bot.on('message', async (event) => {
     }
 
     // for(let k=0;k<data.result.records.length;k++){
-    if (event.message.text.includes(`${data.result.records[0].sarea}`)) {
+    // if (event.message.text.includes(`${data.result.records[0].sarea}`)) {
       // arr2.push(`${data.result.records[k].lat}`)
-      msg = {
+    //   msg = {
         
-    }
+    // }
     // }
   }
   catch (error) {
