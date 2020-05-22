@@ -46,6 +46,7 @@ bot.on('message', async (event) => {
 // ---------------------------------------------------------------------------------------------
     if (event.message.text === '1') {
       msg = { type: 'text', text: '請輸入地區名' }
+       console.log(data.retCode);
     }
 
     for (let i = 0; i < data.retVal.length; i++) {
