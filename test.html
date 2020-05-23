@@ -7,12 +7,21 @@
 </head>
 <body>
   <script>
-    let person = { 
-    name: "王小明", 
-    age: 25, 
-    number: 24 
-}
-console.log(Object.keys(person).length);
+//     let person = { 
+//     name: "王小明", 
+//     age: 25, 
+//     number: 24 
+// }
+// for(let p in person){
+//   document.write(p);
+// }
+
+// let json = {a:1, b:2};   
+let json ={"retVal":{"0001":{"sno": "0001"}}} 
+let data = eval('json');  
+console.log(data);  
+console.log(data.retVal["0001"]);    
+console.log(data['a'])
   </script>
 </body>
 </html>
