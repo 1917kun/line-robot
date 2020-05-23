@@ -15,69 +15,65 @@ const bot = linebot({
   channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
 })
 
-// 當使用者進來時
 // 當收到訊息時
 bot.on('message', async (event) => {
   let msg = {}
   let arr = []
-  
-  // let arr2 = []
   try {
     const datajson = await rp({ uri: 'https://tcgbusfs.blob.core.windows.net/blobyoubike/YouBikeTP.json', json: true })
     const data = eval('datajson')
-    // for (let i = 0; i < data.result.records.length; i++) {
-    // event.message.text是使用者傳的訊息
-    // if (event.message.text.includes(`${data.result.records[i].sarea}`)) {
-    //   arr.push(`${data.result.records[i]}`)
-    // msg += `場站名稱:${data.result.records[i].sna}\n位置是:${data.result.records[i].ar}\n可借車位數:${data.result.records[i].sbi}\n可還空位數:${data.result.records[i].bemp}\n\n`
-    // msg += `場站名稱:${data.result.records[i].sna}\n位置是:${data.result.records[i].ar}\n可借車位數:${data.result.records[i].sbi}\n可還空位數:${data.result.records[i].bemp}`
-    // console.log(msg);
-    //   }
-    // }
-    // for (let j = 0; j < arr.length; j++) {
-    //   msg += `場站名稱:${data.result.records[j].sna}\n位置是:${data.result.records[j].ar}\n可借車位數:${data.result.records[j].sbi}\n可還空位數:${data.result.records[j].bemp}`
-    // }
-    // for(let k=0;k<data.result.records.length;k++){
-    // if (event.message.text.includes(`${data.result.records[0].sarea}`)) {
-    // arr2.push(`${data.result.records[k].lat}`)
-    //   msg = {   
-    // }
-    // }
-// ---------------------------------------------------------------------------------------------
-    if (event.message.text === '1') {
-      msg = { type: 'text', text: '請輸入地區名' }
-      // for(let d in data.retVal){
-      //   console.log(d);
-      // }
-    }
-
-    for (let i = 0; i < data.retVal.length; i++) {
-      if (event.message.text.includes(`${data.retVal[i].sarea}`)) {
-        arr.push(`${data.retVal[i]}`)
-      }
-    }
-
-    for (let j = 0; j < arr.length; j++) {
-      msg += {
-        type: 'template',
-        altText: 'this is a carousel template',
-        template: {
-          type: 'carousel',
-          columns: [{
-
+    const dat = data.retVal
+    
+    // ----------------------------------------使用者輸入地區名 回傳資訊-------------------------------------------------------------------
+    for (let d in dat) {
+      if (dat[d].sna.includes(event.message.text)) {
+        // arr.push(dat[d])
+        msg = {
+          type: 'template',
+          altText: 'this is a buttons template',
+          template: {
+            type: 'buttons',
+            thumbnailImageUrl: 'https://img.onl/TwSRW',
+            title: dat[d].sna,
+            text: dat[d].ar,
             actions: [{
-              type: 'location',
-              title: 'my location',
-              address: data.retVal[j].address,
-              latitude: data.retVal[j].lat,
-              longitude: data.retVal[j].lon
-            }],
-            text: `場站名稱:${data.retVal[j].sna}\n可借車位數:${data.retVal[j].sbi}\n可還空位數:${data.retVal[j].bemp}`,
-          }]
+              type: 'message',
+              label: '可借車位數',
+              text: dat[d].sna + '可借車位數'
+            }, {
+              type: 'message',
+              label: '可還空位數',
+              text: dat[d].sna + '可還空位數'
+            },
+            {
+              type: 'message',
+              label: '地圖',
+              text: dat[d].sna + '地圖'
+            }]
+          }
+        }
+      }
+      if (event.message.text === dat[d].sna + '可借車位數') {
+        msg = {
+          type: 'text', text: dat[d].sbi
+        }
+      }
+      if (event.message.text === dat[d].sna + '可還空位數') {
+        msg = {
+          type: 'text', text: dat[d].bemp
+        }
+      }
+      if (event.message.text === dat[d].sna + '地圖') {
+        msg = {
+          type: 'location',
+          title: 'my location',
+          address:dat[d].sna,
+          latitude: dat[d].lat,
+          longitude: dat[d].lng
         }
       }
     }
-    // ------------------------------------------------------------------------------------------
+    // ---------------------------------使用者輸入2 回傳費率---------------------------------------------------------
     if (event.message.text === '2') {
       msg = {
         type: 'image',
@@ -85,8 +81,8 @@ bot.on('message', async (event) => {
         previewImageUrl: 'https://taipei.youbike.com.tw/images/5dae7194bae271537a0b4424/5eb8bc4436cea.png'
       }
     }
-    // -----------------------------------------------------------------------------------------
-    else if (event.message.text ==='3') {
+    // --------------------------------------使用者輸入3 回傳租借方式---------------------------------------------------
+    else if (event.message.text === '3') {
       msg = {
         type: 'template',
         altText: 'this is a confirm template',
@@ -108,23 +104,23 @@ bot.on('message', async (event) => {
       }
     }
     else if (event.message.text === '靠卡借車') {
-        msg= {
-          type: 'image',
-          originalContentUrl: 'https://img.onl/O3ZN3U' ,
-          previewImageUrl: 'https://img.onl/O3ZN3U'
+      msg = {
+        type: 'image',
+        originalContentUrl: 'https://img.onl/O3ZN3U',
+        previewImageUrl: 'https://img.onl/O3ZN3U'
+      }
     }
-  }
     else if (event.message.text === '掃碼借車') {
       msg = {
         type: 'image',
         originalContentUrl: 'https://img.onl/SckMFS',
         previewImageUrl: 'https://img.onl/SckMFS'
+      }
     }
+    // ---------------------------------使用者輸入嗨 回傳訊息------------------------------------------
+    if (event.message.text === '嗨') {
+      msg = { type: 'text', text: '功能查詢:\n資訊查詢請輸入\n"捷運+站名或\n車站名或\n公園名或\n地標名或\n學校名或\n路口名"\n費率查詢請輸入2\n租還方式查詢請輸入3' }
     }
-// ---------------------------------------------------------------------------
-if(event.message.text === '嗨'){
-  msg = { type: 'text', text: '功能查詢:\n資訊查詢請輸入1\n費率查詢請輸入2\n租還方式查詢請輸入3' }
-}
 
   }
   catch (error) {
