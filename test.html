@@ -20,8 +20,11 @@
 let json ={"retVal":{"0001":{"sno": "0001"}}} 
 let data = eval('json');  
 console.log(data);  
-console.log(data.retVal["0001"]);    
-console.log(data['a'])
+console.log(data.retVal);
+// 0001本身是數字
+console.log(data.retVal['0001']); 
+//  ['retVal'] 因為retVal是變數
+console.log(data['retVal'])
   </script>
 </body>
 </html>

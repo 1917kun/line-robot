@@ -23,8 +23,8 @@ bot.on('message', async (event) => {
   
   // let arr2 = []
   try {
-    const data = await rp({ uri: 'https://tcgbusfs.blob.core.windows.net/blobyoubike/YouBikeTP.json', json: true })
-
+    const datajson = await rp({ uri: 'https://tcgbusfs.blob.core.windows.net/blobyoubike/YouBikeTP.json', json: true })
+    const data = eval('datajson')
     // for (let i = 0; i < data.result.records.length; i++) {
     // event.message.text是使用者傳的訊息
     // if (event.message.text.includes(`${data.result.records[i].sarea}`)) {
@@ -46,7 +46,9 @@ bot.on('message', async (event) => {
 // ---------------------------------------------------------------------------------------------
     if (event.message.text === '1') {
       msg = { type: 'text', text: '請輸入地區名' }
-       console.log(data.retCode);
+      // for(let d in data.retVal){
+      //   console.log(d);
+      // }
     }
 
     for (let i = 0; i < data.retVal.length; i++) {
