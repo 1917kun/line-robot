@@ -106,15 +106,15 @@ bot.on('message', async (event) => {
     else if (event.message.text === '靠卡借車') {
       msg = {
         type: 'image',
-        originalContentUrl: 'https://img.onl/O3ZN3U',
-        previewImageUrl: 'https://img.onl/O3ZN3U'
+        originalContentUrl: 'https://scontent.ftpe8-3.fna.fbcdn.net/v/t1.0-9/97998632_2738246872954432_5223622573530546176_n.jpg?_nc_cat=111&_nc_sid=730e14&_nc_ohc=aenkzzLmTGwAX_tS5hr&_nc_ht=scontent.ftpe8-3.fna&oh=fc1511eae2f8cd1dd3c10b1fbe07d477&oe=5EED7116',
+        previewImageUrl: 'https://scontent.ftpe8-3.fna.fbcdn.net/v/t1.0-9/97998632_2738246872954432_5223622573530546176_n.jpg?_nc_cat=111&_nc_sid=730e14&_nc_ohc=aenkzzLmTGwAX_tS5hr&_nc_ht=scontent.ftpe8-3.fna&oh=fc1511eae2f8cd1dd3c10b1fbe07d477&oe=5EED7116'
       }
     }
     else if (event.message.text === '掃碼借車') {
       msg = {
         type: 'image',
-        originalContentUrl: 'https://img.onl/oocQs5',
-        previewImageUrl: 'https://img.onl/oocQs5'
+        originalContentUrl: 'https://scontent.ftpe8-4.fna.fbcdn.net/v/t1.0-9/99010793_2738246846287768_2020322156130336768_n.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=lfBkAZkMa6QAX8goYKO&_nc_ht=scontent.ftpe8-4.fna&oh=e024b5aae680b306910af99d63b3a5e5&oe=5EEE48A0',
+        previewImageUrl: 'https://scontent.ftpe8-4.fna.fbcdn.net/v/t1.0-9/99010793_2738246846287768_2020322156130336768_n.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=lfBkAZkMa6QAX8goYKO&_nc_ht=scontent.ftpe8-4.fna&oh=e024b5aae680b306910af99d63b3a5e5&oe=5EEE48A0'
       }
     }
     // ---------------------------------使用者輸入嗨 回傳訊息------------------------------------------
