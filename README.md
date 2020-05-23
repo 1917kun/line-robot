@@ -6,11 +6,13 @@
 ---
 
 ## 介紹
-:::danger
-* 台北市的youbike站點資訊(地點、可出借車輛數、可還車車位數)
+
+:::danger* 台北市的youbike站點資訊(地點、可出借車輛數、可還車車位數)
 * 租借費率查詢
-* 借車方式查詢
-:::
+* 借車方式查詢:::
+
+
+
 ## 使用說明
 1. 輸入"嗨"即可查詢功能
 ![](https://github.com/1917kun/line-robot/raw/master/images/嗨.jpg=300x)
@@ -26,9 +28,7 @@
 
 ---
 ## 資料來源
-:::info
->https://data.taipei/#/dataset/detail?id=8ef1626a-892a-4218-8344-f7ac46e1aa48
-:::
+:::info >https://data.taipei/#/dataset/detail?id=8ef1626a-892a-4218-8344-f7ac46e1aa48 :::
 #### *友情提醒*:
 *為提供更優質之資料服務，YouBike臺北市公共自行車即時資訊介接網址自10月16日起改為http://data.taipei/youbike 也就是說用至10月16日喔 (因為我懶得更新嘿)*
 
