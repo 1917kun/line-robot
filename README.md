@@ -1,7 +1,5 @@
 # Ubike Robot! 
-![](https://i.imgur.com/vHDOeWa.png =600x)
-
-
+![](https://github.com/1917kun/line-robot/raw/master/images/微笑.png)
 ## Robot ID:  @507lljgl
  ![](https://i.imgur.com/wH2KGtX.png)
 
