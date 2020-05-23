@@ -113,8 +113,8 @@ bot.on('message', async (event) => {
     else if (event.message.text === '掃碼借車') {
       msg = {
         type: 'image',
-        originalContentUrl: 'https://img.onl/SckMFS',
-        previewImageUrl: 'https://img.onl/SckMFS'
+        originalContentUrl: 'https://img.onl/oocQs5',
+        previewImageUrl: 'https://img.onl/oocQs5'
       }
     }
     // ---------------------------------使用者輸入嗨 回傳訊息------------------------------------------
