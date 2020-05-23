@@ -3,8 +3,6 @@
 ## Robot ID:  @507lljgl
  ![](https://i.imgur.com/wH2KGtX.png)
 
-
-
 ---
 
 ## 介紹
@@ -15,16 +13,16 @@
 :::
 ## 使用說明
 1. 輸入"嗨"即可查詢功能
-![](https://github.com/1917kun/line-robot/raw/master/images/嗨.png)
+![](https://github.com/1917kun/line-robot/raw/master/images/嗨.jpg=300x)
 
 2. 輸入"捷運+站名、車站名、公園名、地標名、學校名、路口名" 查詢場站資訊
-![](https://i.imgur.com/UGwAtlW.jpg =300x)
+![](https://github.com/1917kun/line-robot/raw/master/images/101.jpg )
 
 5. 輸入"2"查詢租借費率
-![](https://i.imgur.com/iE2uneF.jpg =300x)
+![](https://github.com/1917kun/line-robot/raw/master/images/2.jpg)
 
 4. 輸入"3"查詢租還方式
-![](https://i.imgur.com/8TMxySf.jpg =300x)
+![](https://github.com/1917kun/line-robot/raw/master/images/3.jpg)
 
 ---
 ## 資料來源
