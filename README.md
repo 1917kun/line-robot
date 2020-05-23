@@ -9,13 +9,13 @@
 
 ## 介紹
 :::danger
-* **台北市**的youbike站點資訊(地點、可出借車輛數、可還車車位數)
+* 台北市的youbike站點資訊(地點、可出借車輛數、可還車車位數)
 * 租借費率查詢
 * 借車方式查詢
 :::
 ## 使用說明
 1. 輸入"嗨"即可查詢功能
-![](https://i.imgur.com/evLKVrK.jpg =300x)
+![](https://github.com/1917kun/line-robot/raw/master/images/嗨.png)
 
 2. 輸入"捷運+站名、車站名、公園名、地標名、學校名、路口名" 查詢場站資訊
 ![](https://i.imgur.com/UGwAtlW.jpg =300x)
