@@ -29,6 +29,4 @@
 ---
 ## 資料來源
  >https://data.taipei/#/dataset/detail?id=8ef1626a-892a-4218-8344-f7ac46e1aa48 
-#### *友情提醒*:
-*為提供更優質之資料服務，YouBike臺北市公共自行車即時資訊介接網址自10月16日起改為http://data.taipei/youbike 也就是說用至10月16日喔 (因為我懶得更新嘿)*
 
